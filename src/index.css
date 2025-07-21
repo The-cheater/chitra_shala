@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white overflow-x-hidden font-sans;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-purple-500 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-pink-500;
+  }
+}
+
+@layer utilities {
+  .sparkle-trail {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,215,0,0.6) 70%, transparent 100%);
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7);
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .glow-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-hover:hover {
+    @apply shadow-[0_0_15px_5px_rgba(183,148,244,0.5)] transform scale-105;
+  }
+  
+  .cosmic-gradient {
+    background: radial-gradient(ellipse at top, #1a0638 0%, #0a0e2a 50%, #00020e 100%);
+  }
+  
+  .starry-overlay {
+    background-image: 
+      radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
+      radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
+      radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 10px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+  }
+  
+  .crown-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .comet {
+    animation: comet 15s linear infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes comet {
+    0% { 
+      transform: translateX(-100vw) translateY(-100vh) rotate(45deg);
+      opacity: 0; 
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { 
+      transform: translateX(100vw) translateY(100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+}
+
+/* Hide scrollbar for custom class */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+}
