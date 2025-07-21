@@ -25,7 +25,7 @@ const MusicPlayer = () => {
         {isMusicPlaying ? <FaVolumeUp size={24} /> : <FaVolumeMute size={24} />}
       </button>
       
-      <audio ref={audioRef} loop src={musicFile} />
+      <audio ref={audioRef} loop src={musicFile} autoPlay />
     </div>
   );
 };

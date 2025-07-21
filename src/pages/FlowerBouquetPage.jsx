@@ -154,7 +154,7 @@ const FlowerBouquetPage = ({ onAcceptBouquet }) => {
   useEffect(() => {
     // Generate flowers
     const generateFlowers = () => {
-      const numFlowers = 1200;
+      const numFlowers = 999;
       const newFlowers = [];
       
       for (let i = 0; i < numFlowers; i++) {
