@@ -322,7 +322,7 @@ const FlowerBouquetPage = ({ onAcceptBouquet }) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
-              "You always asked me to make you a rose by hand, so here it is - crafted with love in code"
+              "You always asked me to make you flowers by hand, so here it is - crafted with love in code"
             </motion.p>
             
             <motion.div
