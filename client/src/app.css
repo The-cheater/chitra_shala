@@ -1,0 +1,186 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+:root{
+  /* height */
+  --nav-height: 7rem;
+
+  /* dark theme palette */
+  --bg-main: #0b0f14;
+  --bg-surface: rgba(17, 25, 40, 0.75);
+  --bg-surface-strong: rgba(17, 25, 40, 0.95);
+  --text-primary: #e6e6e6;
+  --text-secondary: #a0a7b4;
+  --primary: #8ab4f8;
+  --secondary: #bb86fc;
+  --accent: #00e5ff;
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --shadow-elev: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+  /* animations */
+  --appear-animation: appear;
+  --hover-appear-animation: hoverAppear;
+  --trash-animation: trash;
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes hoverAppear {
+  from {margin-top: 1rem; opacity: 0;}
+  to {margin-top: 0rem; opacity: 1;}
+}
+
+@keyframes trash{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	25%{
+		transform: rotateZ(20deg);
+	}
+	50%{
+		transform: rotateZ(0deg);
+	}
+	75%{
+		transform: rotateZ(-20deg);	
+	}
+	100%{
+		transform: rotateZ(0deg);
+	}
+}
+
+.facebook{ color: #3B5998; }
+.instagram{ color: #E4405F; }
+.twitter{ color: #1DA1F2; }
+.messanger { color: #0084FF; }
+
+/********************Global Styles********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, 'Gilroy', sans-serif;
+  scroll-behavior: smooth;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+input, button{
+  border: none;
+  outline: none;
+}
+
+html{
+  font-size: 62.5%; 
+  /* 1rem=16px=100%, but we want 1rem=10px. In percentage, 10/16*100 = 62.5.*/
+
+  scroll-behavior: smooth;
+}
+
+/******************** Default Css ********************/
+body{
+  background: radial-gradient(1200px 800px at 10% 10%, #0e141b 0%, var(--bg-main) 60%),
+              radial-gradient(1000px 600px at 90% 0%, rgba(187,134,252,0.15) 0%, rgba(11,15,20,0) 70%),
+              radial-gradient(900px 700px at 0% 100%, rgba(138,180,248,0.12) 0%, rgba(11,15,20,0) 70%);
+  color: var(--text-primary);
+}
+
+.app{
+  padding: 0 5rem;
+}
+
+/* Glass utility */
+.glass{
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-elev);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Subtle hover float */
+.hover-float{
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.hover-float:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+/* Accent underline animation */
+.underline-accent{
+  position: relative;
+}
+.underline-accent::after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  transition: width .3s ease;
+}
+.underline-accent:hover::after{ width: 100%; }
+
+/******************** Media Query ********************/
+
+/* large tablet screen */
+@media (max-width: 992px) {
+  html{
+    font-size: 60%;
+  }
+
+  .app {
+    padding: 0 6rem;
+  }
+}
+
+/* small tablet screen */
+@media (max-width: 768px) {
+  html{
+    font-size: 57%;
+  }
+
+  .app {
+    padding: 0 4rem;
+  }
+}
+
+/* large mobile screen */
+@media (max-width: 576px) {
+  html{
+    font-size: 53.5%;
+  }
+
+  .app {
+    padding: 0 2rem;
+  }
+}
+
+/* small mobile screen */
+@media (max-width: 480px) {
+  html{
+    font-size: 50%;
+  }
+  
+  .app {
+    padding: 0 1rem;
+  }
+}
+
+/* extra small mobile screen */
+@media (max-width: 360px) {
+  .app {
+    padding: 0 0.5rem;
+  }
+}
