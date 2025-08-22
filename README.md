@@ -1,4 +1,4 @@
-# <img src="server/assets/logo.png" alt="Kala Logo" width="120" />
+
 
 # Kala — Art Gallery E-commerce Platform
 Welcome to the Art Gallery E-commerce Platform! This platform is designed for art enthusiasts and collectors who want to browse and purchase various forms of art, including paintings, sculptures, and more. The platform also includes an auction feature where users can bid on unique and rare pieces of art.
