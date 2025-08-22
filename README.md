@@ -28,13 +28,7 @@ Here are some of the key features of the Art Gallery E-commerce Platform:
 
 <br>
 
-## Demo
-<div>
-<span>
-<h4>Banner Page</h4>
-<img width="100%" alt="banner" src="https://user-images.githubusercontent.com/71174333/236187026-94346d16-7811-429d-b0c9-d9a2f20a63ca.jpg">
-</span>
-</div>
+
 
 ---
 
